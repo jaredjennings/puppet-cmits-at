@@ -17,9 +17,9 @@
 
 class at::stig {
     case $::osfamily {
-        'redhat': { include at::stig::redhat }
-        'darwin': { include at::stig::darwin }
-        default:  { unimplemented() }
+        'RedHat': { include at::stig::redhat }
+        'Darwin': { include at::stig::darwin }
+        default:  { fail "unimplemented on ${::osfamily}" }
     }
 }
 
