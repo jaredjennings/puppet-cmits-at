@@ -27,7 +27,7 @@ class at::stig::redhat {
 # \implements{unixsrg}{GEN003280,GEN003320,GEN003460,GEN003470,GEN003340}%
 # Control contents and permissions of \verb!at.allow!.
         "/etc/at.allow":
-            owner => root, group => 0, mode => 0600,
+            owner => root, group => 0, mode => '0600',
             content => "root\n";
 # \implements{unixsrg}{GEN003400,GEN003420,GEN003430}%
 # Control permissions of ``the `at' directory.''
@@ -35,7 +35,7 @@ class at::stig::redhat {
 # In the default install, this is owned by \verb!daemon!, group \verb!daemon!,
 # so this change might break \verb!at!. 
         "/var/spool/at":
-            owner => root, group => 0, mode => 0700;
+            owner => root, group => 0, mode => '0700';
     }
 
     no_ext_acl {
